@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int day = 1;
+        int a = 0;
+        int b = 0;
+        int c = 0;
+
+        while (day <= n) {
+            if (day % 12 == 0) {
+                c++;
+            } else if (day % 3 == 0) {
+                b++;
+            } else if (day % 2 == 0) {
+                a++;
+            }
+            day++;
+        }
+        System.out.println(a + " " + b + " " + c);
+    }
+}
