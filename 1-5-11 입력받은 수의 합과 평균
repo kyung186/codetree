@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+
+        int sum = 0;
+        for (int i = 0; i < N; i++) {
+            sum += sc.nextInt();
+        }
+
+        double temp = sum / N;
+        double temp2 = sum % N;
+        double temp3 = 0;
+        if (temp2 != 0) {
+            temp3 = (temp2 * 10) / N;
+        }
+        
+        double temp4 = temp + (temp3 * 0.1);
+        
+        String avg = String.format("%.1f", temp4);
+        System.out.println(sum + " " + avg);
+    }
+}
