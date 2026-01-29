@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int temp = N;
+
+        if (temp % 2 == 0) {
+            temp /= 2;
+        } else {
+            temp = (temp - 1) / 2;
+        }
+
+        int sum = 1;
+        for (int i = 2; i <= temp; i++) {
+            if (N % i == 0) {
+                sum += i;
+            }
+        }
+
+        if (N == sum) {
+            System.out.println("P");
+        } else {
+            System.out.println("N");
+        }   
+    }
+}
